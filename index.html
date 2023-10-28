@@ -5,6 +5,21 @@
 <body>
 <h1>Nee hier ga je helaas echt niks vinden!!</h1>
 <p>Of toch wel??</p>
-<a href="https://www.youtube.com/watch?v=EfrCnLl_nck">Misschien moet je hier klikken?</a>
+<button id="knop">Klink hier eens!!</button>
+<a id="link" hidden="true" href="https://www.youtube.com/watch?v=EfrCnLl_nck">Misschien moet je hier klikken?</a>
 </body>
+<script>
+  let clicks = 51;
+  function handleButton() {
+    clicks--;
+    if (clicks <= 0) {
+      document.getElementById("link").hidden = false;
+      document.getElementById("knop").textContent = "Misschien geeft die link een hint!";
+    } else {
+      document.getElementById("knop").textContent = "Je moet nog " + clicks + " keer klikken voor een hint";
+    }
+    
+    
+  }
+</script>
 </html>
